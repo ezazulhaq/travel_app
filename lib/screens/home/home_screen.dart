@@ -1,11 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:travel_app/constants.dart';
+import 'package:travel_app/screens/components/body.dart';
+import 'package:travel_app/size_config.dart';
 
 class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    // You have to call SizeConfig on your Starting Page
+    SizeConfig().init(context);
+
     return Scaffold(
+      extendBodyBehindAppBar: true,
       appBar: buildAppBar(),
+      body: Body(),
     );
   }
 
