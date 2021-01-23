@@ -60,7 +60,9 @@ class PlaceCard extends StatelessWidget {
                   ),
                 ),
                 VerticalSpacing(of: 12),
-                Travelers(),
+                Travelers(
+                  users: travelSpot.users,
+                ),
               ],
             ),
           ),

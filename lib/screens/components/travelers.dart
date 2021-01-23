@@ -1,12 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:travel_app/constants.dart';
 import 'package:travel_app/models/TravelSpot.dart';
+import 'package:travel_app/models/User.dart';
 import 'package:travel_app/size_config.dart';
 
 class Travelers extends StatelessWidget {
   const Travelers({
     Key key,
+    @required this.users,
   }) : super(key: key);
+
+  final List<User> users;
 
   @override
   Widget build(BuildContext context) {

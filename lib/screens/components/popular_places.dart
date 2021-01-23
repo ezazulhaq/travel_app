@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:travel_app/components/section_title.dart';
 import 'package:travel_app/models/TravelSpot.dart';
 import 'package:travel_app/screens/components/place_card.dart';
+import 'package:travel_app/size_config.dart';
 
 class PopularPlaces extends StatelessWidget {
   const PopularPlaces({
@@ -16,9 +17,24 @@ class PopularPlaces extends StatelessWidget {
           title: "Right now At Spark",
           press: () {},
         ),
-        PlaceCard(
-          travelSpot: travelSpots[0],
-          press: () {},
+        VerticalSpacing(of: 20),
+        SingleChildScrollView(
+          clipBehavior: Clip.none,
+          scrollDirection: Axis.horizontal,
+          child: Row(
+            children: [
+              ...List.generate(travelSpots.length, (index) {
+                return Padding(
+                  padding:
+                      EdgeInsets.only(left: getProportionateScreenWidth(20)),
+                  child: PlaceCard(
+                    travelSpot: travelSpots[index],
+                    press: () {},
+                  ),
+                );
+              }),
+            ],
+          ),
         ),
       ],
     );
