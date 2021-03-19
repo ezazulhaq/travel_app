@@ -32,6 +32,7 @@ class Travelers extends StatelessWidget {
             child: SizedBox(
               height: getProportionateScreenHeight(28),
               width: getProportionateScreenWidth(28),
+              // ignore: deprecated_member_use
               child: FlatButton(
                 onPressed: () {},
                 padding: EdgeInsets.zero,
