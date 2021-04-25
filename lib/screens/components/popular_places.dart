@@ -1,3 +1,4 @@
+// @dart = 2.9
 import 'package:flutter/material.dart';
 import 'package:travel_app/components/section_title.dart';
 import 'package:travel_app/models/TravelSpot.dart';
